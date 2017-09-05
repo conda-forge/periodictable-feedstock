@@ -15,6 +15,18 @@ X-ray scattering experiments. With the elements pacakge you can
 compute the scattering potential of a compound at a given wavelength.
 
 
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/periodictable-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/periodictable-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/periodictable-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/periodictable-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/periodictable-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/periodictable-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/periodictable/badges/version.svg)](https://anaconda.org/conda-forge/periodictable)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/periodictable/badges/downloads.svg)](https://anaconda.org/conda-forge/periodictable)
+
 Installing periodictable
 ========================
 
@@ -35,7 +47,6 @@ It is possible to list all of the versions of `periodictable` available on your 
 ```
 conda search periodictable --channel conda-forge
 ```
-
 
 
 About conda-forge
@@ -71,18 +82,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/periodictable-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/periodictable-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/periodictable-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/periodictable-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/periodictable-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/periodictable-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/periodictable/badges/version.svg)](https://anaconda.org/conda-forge/periodictable)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/periodictable/badges/downloads.svg)](https://anaconda.org/conda-forge/periodictable)
 
 
 Updating periodictable-feedstock
