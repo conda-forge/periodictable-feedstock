@@ -1,6 +1,6 @@
 {% set name = "periodictable" %}
-{% set version = "1.5.0" %}
-{% set sha256 = "b020c04c6765d21903e4604a76ca33cda98677003fe6eb48ed3690cfb03253b2" %}
+{% set version = "1.5.1" %}
+{% set sha256 = "cf3554e5ab28daeaa3d7acc16f702655bca56e822d5e984fec5d2c4ba1cca761" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
