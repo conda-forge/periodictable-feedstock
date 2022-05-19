@@ -1,6 +1,6 @@
 {% set name = "periodictable" %}
-{% set version = "1.5.2" %}
-{% set sha256 = "1fea8abf0c20453550630ca682a75f0148f65b6d21fdcce7cf0c0e98631fa0d3" %}
+{% set version = "1.6.1" %}
+{% set sha256 = "7c501c9f73d77b1fb28cb51e85b28429c2c44a99ce3d1274894564c72d712603" %}
 
 package:
   name: {{ name|lower }}
@@ -34,7 +34,7 @@ test:
 about:
   home: http://www.reflectometry.org/danse/elements.html
   license: Public domain
-  summary: 'Extensible periodic table for python'
+  summary: Extensible periodic table for python
 
   description: |
     The periodictable package provides an extensible periodic table
