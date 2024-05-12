@@ -1,6 +1,6 @@
 {% set name = "periodictable" %}
-{% set version = "1.5.2" %}
-{% set sha256 = "1fea8abf0c20453550630ca682a75f0148f65b6d21fdcce7cf0c0e98631fa0d3" %}
+{% set version = "1.7.0" %}
+{% set sha256 = "420e57c2b19d6a521b1c0b5e387da590a31a8456e4cc1c00bca5ce2dc5f05ea9" %}
 
 package:
   name: {{ name|lower }}
