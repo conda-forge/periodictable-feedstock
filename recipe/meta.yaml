@@ -1,6 +1,6 @@
 {% set name = "periodictable" %}
-{% set version = "1.5.2" %}
-{% set sha256 = "1fea8abf0c20453550630ca682a75f0148f65b6d21fdcce7cf0c0e98631fa0d3" %}
+{% set version = "1.7.1" %}
+{% set sha256 = "43d7db7233d6b33962f83d79ea54f47c3b923d3e83403cbc03f58f353af4b52c" %}
 
 package:
   name: {{ name|lower }}
@@ -19,10 +19,10 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >=3.8
     - setuptools
   run:
-    - python
+    - python >=3.8
     - numpy
     - pyparsing
 
@@ -47,3 +47,4 @@ about:
 extra:
   recipe-maintainers:
     - bjodah
+    - mrakitin
