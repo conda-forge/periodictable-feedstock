@@ -3,15 +3,15 @@ About periodictable-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/periodictable-feedstock/blob/main/LICENSE.txt)
 
-Home: http://www.reflectometry.org/danse/elements.html
+Home: https://github.com/python-periodictable/periodictable
 
 Package license: Public domain
 
 Summary: Extensible periodic table for python
 
-Development: https://github.com/pkienzle/periodictable
+Development: https://github.com/python-periodictable/periodictable
 
-Documentation: http://www.reflectometry.org/danse/docs/elements/
+Documentation: https://periodictable.readthedocs.io
 
 The periodictable package provides an extensible periodic table
 of the elements prepopulated with data important to neutron and

@@ -1,6 +1,6 @@
 {% set name = "periodictable" %}
-{% set version = "1.7.1" %}
-{% set sha256 = "43d7db7233d6b33962f83d79ea54f47c3b923d3e83403cbc03f58f353af4b52c" %}
+{% set version = "2.1.0" %}
+{% set sha256 = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" %}
 
 package:
   name: {{ name|lower }}
@@ -19,12 +19,12 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python >=3.10
     - setuptools
   run:
-    - python >=3.8
+    - python >=3.10
     - numpy
-    - pyparsing
+    - pyparsing>=3.0.0
 
 test:
   imports:
@@ -32,7 +32,7 @@ test:
     - periodictable.density
 
 about:
-  home: http://www.reflectometry.org/danse/elements.html
+  home: https://github.com/python-periodictable/periodictable
   license: Public domain
   summary: 'Extensible periodic table for python'
 
@@ -41,8 +41,8 @@ about:
     of the elements prepopulated with data important to neutron and
     X-ray scattering experiments. With the elements pacakge you can
     compute the scattering potential of a compound at a given wavelength.
-  doc_url: http://www.reflectometry.org/danse/docs/elements/
-  dev_url: https://github.com/pkienzle/periodictable
+  doc_url: https://periodictable.readthedocs.io/en/v{{ version }}
+  dev_url: https://github.com/python-periodictable/periodictable
 
 extra:
   recipe-maintainers:
