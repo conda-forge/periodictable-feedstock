@@ -27,7 +27,7 @@ requirements:
     - pyparsing >=3.0.0
 
 tests:
-  - python
+  - python:
     imports:
       - periodictable
       - periodictable.density
