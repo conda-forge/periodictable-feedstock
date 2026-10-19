@@ -1,7 +1,3 @@
-#{% set name = "periodictable" %}
-#{% set version = "2.1.0" %}
-#{% set sha256 = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" %}
-
 context:
   name: "periodictable"
   version: "2.1.0"
@@ -9,18 +5,17 @@ context:
   sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ${{ name }}
+  version: ${{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://files.pythonhosted.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  sha256: ${{ sha256 }}
 
 build:
   noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
   number: 0
-  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -28,7 +23,7 @@ requirements:
     - pip
     - setuptools
   run:
-    - python >={{ python_min }}
+    - python >=${{ python_min }}
     - numpy
     - pyparsing >=3.0.0
 
@@ -37,20 +32,19 @@ tests:
     imports:
       - periodictable
       - periodictable.density
-    python_version: ${{ python_min }}.*
     pip_check: true
 
 about:
-  home: https://github.com/python-periodictable/periodictable
-  license: NIST-PD
+  homepage: https://github.com/python-periodictable/periodictable
   summary: 'Extensible periodic table for python'
   description: |
     The periodictable package provides an extensible periodic table
     of the elements prepopulated with data important to neutron and
     X-ray scattering experiments. With the elements pacakge you can
     compute the scattering potential of a compound at a given wavelength.
-  repository: https://github.com/python-periodictable/periodictable
+  license: NIST-PD
   documentation: https://periodictable.readthedocs.io/en/v{{ version }}
+  repository: https://github.com/python-periodictable/periodictable
 
 extra:
   recipe-maintainers:
