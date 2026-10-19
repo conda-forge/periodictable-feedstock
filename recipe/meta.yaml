@@ -8,41 +8,45 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
   noarch: python
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
+    - python ${{ python_min }}.*
     - pip
-    - python >=3.10
     - setuptools
   run:
-    - python >=3.10
+    - python >=${{ python_min }}
     - numpy
-    - pyparsing>=3.0.0
+    - pyparsing >=3.0.0
 
-test:
-  imports:
-    - periodictable
-    - periodictable.density
+tests:
+  - python
+    imports:
+      - periodictable
+      - periodictable.density
+    python_version:
+      - ${{ python_min }}.*
+      - "*"
+    pip_check: true
 
 about:
   home: https://github.com/python-periodictable/periodictable
-  license: Public domain
+  license: NIST-PD
   summary: 'Extensible periodic table for python'
-
   description: |
     The periodictable package provides an extensible periodic table
     of the elements prepopulated with data important to neutron and
     X-ray scattering experiments. With the elements pacakge you can
     compute the scattering potential of a compound at a given wavelength.
-  doc_url: https://periodictable.readthedocs.io/en/v{{ version }}
-  dev_url: https://github.com/python-periodictable/periodictable
+  repository: https://github.com/python-periodictable/periodictable
+  documentation: https://periodictable.readthedocs.io/en/v{{ version }}
 
 extra:
   recipe-maintainers:
