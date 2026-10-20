@@ -51,7 +51,7 @@ about:
     of the elements prepopulated with data important to neutron and
     X-ray scattering experiments. With the elements package you can
     compute the scattering potential of a compound at a given wavelength.
-  license: NIST-PD
+  license: BSD-3-Clause
   license_file: LICENSE.txt
   documentation: https://periodictable.readthedocs.io/en/v${{ version }}
   repository: https://github.com/python-periodictable/periodictable
