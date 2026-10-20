@@ -11,7 +11,7 @@ Summary: Extensible periodic table for python
 
 Development: https://github.com/python-periodictable/periodictable
 
-Documentation: https://periodictable.readthedocs.io/en/v%7B%7B%20version%20%7D%7D
+Documentation: https://periodictable.readthedocs.io/en/v2.1.0
 
 The periodictable package provides an extensible periodic table
 of the elements prepopulated with data important to neutron and
