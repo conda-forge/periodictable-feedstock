@@ -53,7 +53,7 @@ about:
     compute the scattering potential of a compound at a given wavelength.
   license: NIST-PD
   license_file: LICENSE.txt
-  documentation: https://periodictable.readthedocs.io/en/v{{ version }}
+  documentation: https://periodictable.readthedocs.io/en/v${{ version }}
   repository: https://github.com/python-periodictable/periodictable
 
 extra:
