@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/periodictable-f
 
 Home: https://github.com/python-periodictable/periodictable
 
-Package license: NIST-PD
+Package license: BSD-3-Clause
 
 Summary: Extensible periodic table for python
 
