@@ -5,19 +5,18 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/periodictable-f
 
 Home: https://github.com/python-periodictable/periodictable
 
-Package license: Public domain
+Package license: NIST-PD
 
 Summary: Extensible periodic table for python
 
 Development: https://github.com/python-periodictable/periodictable
 
-Documentation: https://periodictable.readthedocs.io/en/v2.1.0
+Documentation: https://periodictable.readthedocs.io/en/v%7B%7B%20version%20%7D%7D
 
 The periodictable package provides an extensible periodic table
 of the elements prepopulated with data important to neutron and
-X-ray scattering experiments. With the elements pacakge you can
+X-ray scattering experiments. With the elements package you can
 compute the scattering potential of a compound at a given wavelength.
-
 
 Current build status
 ====================
@@ -132,6 +131,7 @@ mamba repoquery depends periodictable --channel conda-forge
 </details>
 
 
+
 About conda-forge
 =================
 
@@ -146,9 +146,7 @@ for each of the installable packages. Such a repository is known as a *feedstock
 A feedstock is made up of a conda recipe (the instructions on what and how to build
 the package) and the necessary configurations for automatic building using freely
 available continuous integration services. Thanks to the awesome service provided by
-[Azure](https://azure.microsoft.com/en-us/services/devops/), [GitHub](https://github.com/),
-[CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
-[Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
+[Azure](https://azure.microsoft.com/en-us/services/devops/) and [GitHub](https://github.com/)
 it is possible to build and upload installable packages to the
 [conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
