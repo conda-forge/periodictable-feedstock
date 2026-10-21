@@ -1,0 +1,62 @@
+schema_version: 1
+
+context:
+  version: "2.1.0"
+  #python_min: "3.10"
+  #sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  # sha256 for v2.1.0 tar.gz from github release
+  sha256: "f27bcf7ca703ccab6367fb84b0a1e90a326164473acabb800c610ef7d49b2e88"
+
+package:
+  name: periodictable
+  version: ${{ version }}
+
+source:
+  # Grab the source from the github release
+  url: https://github.com/python-periodictable/periodictable/archive/refs/tags/v${{ version }}.tar.gz
+  # Grab the source from PyPI doesn't seem to work...
+  #url: https://files.pythonhosted.org/packages/source/p/periodictable/periodictable-${{ version }}.tar.gz
+  sha256: ${{ sha256 }}
+
+build:
+  noarch: python
+  number: 0
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - setuptools
+  run:
+    - python >=${{ python_min }}
+    - numpy
+    - pyparsing >=3.0.0
+
+tests:
+  - python:
+      imports:
+        - periodictable
+        - periodictable.density
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+      pip_check: true
+
+about:
+  homepage: https://github.com/python-periodictable/periodictable
+  summary: 'Extensible periodic table for python'
+  description: |
+    The periodictable package provides an extensible periodic table
+    of the elements prepopulated with data important to neutron and
+    X-ray scattering experiments. With the elements package you can
+    compute the scattering potential of a compound at a given wavelength.
+  license: BSD-3-Clause
+  license_file: LICENSE.txt
+  documentation: https://periodictable.readthedocs.io/en/v${{ version }}
+  repository: https://github.com/python-periodictable/periodictable
+
+extra:
+  recipe-maintainers:
+    - bjodah
+    - mrakitin
